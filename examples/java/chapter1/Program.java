@@ -15,6 +15,10 @@ class PlayerInfo {
 	}
 	
 	public void setPlayerName(String newName) {
+		if (newName.contains("#!@$")) {
+			return;
+		}
+		
 		this.playerName = newName;
 	}
 	
@@ -29,10 +33,13 @@ class PlayerInfo {
 
 public class Program {
 	public static void main(String[] args) {
+		
 		// Instantiation: steve 라는 PlayerInfo 타입의 object 를 생성함.
 		PlayerInfo steve = new PlayerInfo("Steve");
 		// Instantiation: brad 라는 PlayerInfo 타입의 object 를 생성함.
 		PlayerInfo brad = new PlayerInfo("Brad");
+		
+		steve.
 		
 		// steve 의  playerName field 값을 가져오는 getter
 		System.out.println(steve.getPlayerName()); // Steve
